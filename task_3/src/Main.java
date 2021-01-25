@@ -49,7 +49,13 @@ public class Main {
                 case 'B':
                     for (int j = 0; j < 5; j++) {
                         for (int i = 0; i < 4; i++) {
-                            System.out.println(j+" "+routine[j][i].getHourIndex()+ " "+routine[j][i].getCourseName());
+                            if(routine[j][i] != null){
+                                System.out.println(j+" "+routine[j][i].getHourIndex()+ " "+routine[j][i].getCourseName());
+                            }
+                            else{
+                                System.out.println("Routine is empty. Create first.");
+                                break;
+                            }
                         }
                         System.out.println();
                     }
